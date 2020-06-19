@@ -1,0 +1,205 @@
+1 > Table name : DPS_USER_TAB
+
+Name         Null?    Type         
+------------ -------- ------------ 
+USER_ID      NOT NULL VARCHAR2(45) 
+USERNAME     NOT NULL VARCHAR2(45) 
+PASSWORD     NOT NULL VARCHAR2(45) 
+STATUS       NOT NULL VARCHAR2(45) 
+USER_ROLE_ID          VARCHAR2(50) 
+UPDATED_BY            VARCHAR2(50) 
+UPDATED_ON            DATE     
+
+insert into DPS_USER_TAB values ('bnssop','mehul.makwana@bnscolorama.co.uk','bnssop','active','R101','ifsapp',sysdate);
+
+
+2 > Table name : DPS_ROLE_TAB
+
+Name       Null?    Type          
+---------- -------- ------------- 
+ROLE_ID    NOT NULL VARCHAR2(45)  
+ROLE_NAME  NOT NULL VARCHAR2(100) 
+STATUS     NOT NULL VARCHAR2(50)  
+UPDATED_BY          VARCHAR2(50)  
+UPDATED_ON          DATE     
+
+query > insert into DPS_ROLE_TAB values ('R101','ROLE_USER','active','mehul',sysdate);
+
+
+Date : 09/06/2020 (Told by sarfarazbhai)
+
+3> New Column in pricematrix
+
+ALTER TABLE pricematrix
+    ADD lead_time varchar2(20);
+    
+
+4> Table name : DPS_PROD_CAT_MASTER_TAB
+Name          Null?    Type          
+------------- -------- ------------- 
+PROD_CAT_ID   NOT NULL VARCHAR2(45)  
+PROD_CAT_NAME NOT NULL VARCHAR2(500) 
+PROD_CAT_DESC          VARCHAR2(500) 
+STATUS        NOT NULL VARCHAR2(50)  
+UPDATED_BY             VARCHAR2(50)  
+UPDATED_ON             DATE          
+
+5> Table name : DPS_PROD_TYPE_TAB
+
+Name           Null?    Type          
+-------------- -------- ------------- 
+PROD_TYPE_ID   NOT NULL VARCHAR2(45)  
+PROD_TYPE_NAME NOT NULL VARCHAR2(500) 
+PROD_TYPE_DESC          VARCHAR2(500) 
+STATUS         NOT NULL VARCHAR2(50)  
+UPDATED_BY              VARCHAR2(50)  
+UPDATED_ON              DATE          
+
+6>Table name : DPS_STOCK_CAT_MASTER_TAB
+
+Name               Null?    Type          
+------------------ -------- ------------- 
+STOCK_CAT_ID       NOT NULL VARCHAR2(45)  
+STOCK_CAT_NAME     NOT NULL VARCHAR2(500) 
+STOCK_CAT_DESC     NOT NULL VARCHAR2(500) 
+STATUS             NOT NULL VARCHAR2(50)  
+STOCK_CAT_COLOR_ID          VARCHAR2(50)  
+UPDATED_BY         NOT NULL VARCHAR2(150) 
+UPDATED_ON                  DATE          
+
+
+7 > Table name : DPS_COLOR_CODE_TAB
+
+Name       Null?    Type         
+---------- -------- ------------ 
+COLOR_ID   NOT NULL VARCHAR2(45) 
+COLOR_CODE NOT NULL VARCHAR2(45) 
+COLOR_NAME NOT NULL VARCHAR2(50) 
+STATUS     NOT NULL VARCHAR2(50) 
+UPDATED_BY          VARCHAR2(50) 
+UPDATED_ON          DATE         
+
+8> Table name : DPS_COLOR_CODE_TAB
+
+Name           Null?    Type          
+-------------- -------- ------------- 
+USER_ID        NOT NULL VARCHAR2(45)  
+USER_FIRSTNAME NOT NULL VARCHAR2(80)  
+USER_LASTNAME  NOT NULL VARCHAR2(80)  
+ADDRESS                 VARCHAR2(500) 
+PHONE_NO                VARCHAR2(15)  
+DEPT_ID                 VARCHAR2(20)  
+UPDATED_BY     NOT NULL VARCHAR2(50)  
+UPDATED_ON              DATE          
+
+
+9 > Table name : DPS_USER_DETAILS_TAB
+Name           Null?    Type          
+-------------- -------- ------------- 
+USER_ID        NOT NULL VARCHAR2(45)  
+USER_FIRSTNAME NOT NULL VARCHAR2(80)  
+USER_LASTNAME  NOT NULL VARCHAR2(80)  
+ADDRESS                 VARCHAR2(500) 
+PHONE_NO                VARCHAR2(15)  
+DEPT_ID                 VARCHAR2(20)  
+UPDATED_BY     NOT NULL VARCHAR2(50)  
+UPDATED_ON              DATE          
+
+
+10 > Table Name : DPS_PROD_PARAM_MASTER_TAB
+
+Name            Null?    Type         
+--------------- -------- ------------ 
+TRANSACTION_ID  NOT NULL VARCHAR2(45) 
+REF_PROD_CAT_ID NOT NULL VARCHAR2(45) 
+CATALOG_NO               VARCHAR2(45) 
+UPDATED_BY               VARCHAR2(50) 
+UPDATED_ON               DATE         
+STATUS                   VARCHAR2(50) 
+
+
+11 > Table Name : DPS_PROD_PARAM_DETAIL_TAB; 
+Name           Null?    Type         
+-------------- -------- ------------ 
+TRANSACTION_ID NOT NULL VARCHAR2(45) 
+STK_CAT_ID     NOT NULL VARCHAR2(45)        
+STK_CAT_TO              NUMBER       
+UPDATED_BY              VARCHAR2(50) 
+UPDATED_ON              DATE         
+
+
+13> DPS_VISUALIZATION_TAB
+
+Name              Null?    Type           
+----------------- -------- -------------- 
+YEAR              NOT NULL NUMBER         
+MONTH             NOT NULL NUMBER         
+PROD_CAT_ID       NOT NULL VARCHAR2(45)   
+STOCK_CAT_ID      NOT NULL VARCHAR2(45)   
+CATALOG_NO        NOT NULL VARCHAR2(25)   
+DESCRIPTION                VARCHAR2(1000) 
+PROFIT_NCSO                VARCHAR2(1)    
+CS_UNIT                    NUMBER         
+CS_COVER                   NUMBER         
+CS_PALLET                  NUMBER         
+RS_UNIT                    NUMBER         
+RS_TREND                   NUMBER         
+ITS_UNIT                   NUMBER         
+ITS_COVER                  NUMBER         
+ITS_DELIVERY_DATE          DATE           
+ITS_PALLET                 NUMBER         
+BN_UNIT                    NUMBER         
+BN_COVER                   NUMBER         
+BN_LEAD_TIME               NUMBER         
+AVERAGE           NOT NULL VARCHAR2(45)   
+STATUS                     VARCHAR2(20)   
+UPDATED_BY                 VARCHAR2(25)   
+UPDATED_ON                 DATE           
+ID                NOT NULL NUMBER         
+
+12> change by vijay    
+table name : DPS_PROD_RATE_OF_SALE
+
+    CREATE TABLE DPS_PROD_RATE_OF_SALE (
+    RATE_OF_PRODUCT_SALE_ID int NOT NULL,
+    PROD_CAT_ID varchar(255) NOT NULL,
+    PROD_CAT_NAME varchar(255) NOT NULL,
+    LAX_PART_NUMBER varchar(255) NOT NULL,
+    PRODUCT_NAME varchar(255),
+    STOCK_CURRENT_STOCK bigint,
+    STOCK_WEEK_OF_COVER bigint,
+	STOCK_PALLETS bigint,
+	IN_TRANSIT_STOCK_QTY_ORDERED bigint,
+    IN_TRANSIT_STOCK_QTY_RECEIVED bigint,
+    IN_TRANSIT_STOCK_WEEK_OF_COVER bigint ,
+    IN_TRANSIT_STOCK_PALLETS bigint,
+    IN_TRANSIT_STOCK_DELIVERY_DATE DATE,
+	IN_TRANSIT_STOCK_RECEIVED_DATE DATE,
+    LEAD_TIME bigint,
+    CURRENT_MONTH_PURCHASED_PRICE bigint,
+    CURRENT_MONTH_SUPPLIER_NAME varchar(255),
+    CURRENT_MONTH_COUNTRY varchar(255),
+    PREV_MONTH_PURCHASED_PRICE bigint ,
+	PREV_MONTH_SUPPLIER_NAME varchar(255),
+    PREV_MONTH_COUNTRY varchar(255),
+    UNITS_SOLD_PER_DAY  bigint,
+    UNITS_SOLD_PER_WEEK  bigint ,
+    AVG_PRICE bigint ,
+    TAX_RATE bigint ,
+    MONTH_ONE bigint,
+    MONTH_TWO bigint ,
+	MONTH_THREE bigint,
+    MONTH_FOUR bigint,
+    MONTH_FIVE bigint,
+    MONTH_SIX bigint,
+    MONTH_SEVEN bigint,
+    MONTH_EIGHT bigint,
+    MONTH_NINE bigint,
+    MONTH_TEN bigint,
+    MONTH_ELEVEN  bigint,
+    MONTH_TWELVE   bigint,
+TWELVE_WEEK_TREND_UNITS  bigint,
+     CONSTRAINT PK_DPS_PROD_RATE_OF_SALE PRIMARY KEY (RATE_OF_PRODUCT_SALE_ID)
+);
+    
+    

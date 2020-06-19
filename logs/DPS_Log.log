@@ -1,0 +1,187 @@
+05-06-2020 01:07:14.039 [main] INFO  com.bns.SpringBootJwtApplication.logStarting - Starting SpringBootJwtApplication on RaHu0o7 with PID 8320 (started by mehul in E:\Office work\sts4\DemandPlanningService\DemandPlanningService)
+05-06-2020 01:07:14.042 [main] DEBUG com.bns.SpringBootJwtApplication.logStarting - Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+05-06-2020 01:07:14.043 [main] INFO  com.bns.SpringBootJwtApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+05-06-2020 01:07:15.320 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data repositories in DEFAULT mode.
+05-06-2020 01:07:15.400 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 67ms. Found 1 repository interfaces.
+05-06-2020 01:07:15.792 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+05-06-2020 01:07:15.801 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+05-06-2020 01:07:15.827 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+05-06-2020 01:07:15.830 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@640dc4c6' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+05-06-2020 01:07:15.833 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+05-06-2020 01:07:15.838 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+05-06-2020 01:07:16.168 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8082 (http)
+05-06-2020 01:07:16.182 [main] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+05-06-2020 01:07:16.183 [main] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.27]
+05-06-2020 01:07:16.338 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+05-06-2020 01:07:16.338 [main] INFO  o.s.web.context.ContextLoader.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 2221 ms
+05-06-2020 01:07:16.431 [main] DEBUG com.bns.config.JwtRequestFilter.init - Filter 'jwtRequestFilter' configured for use
+05-06-2020 01:07:16.696 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+05-06-2020 01:07:17.269 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+05-06-2020 01:07:17.328 [main] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+05-06-2020 01:07:17.471 [main] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate Core {5.4.8.Final}
+05-06-2020 01:07:17.683 [main] INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+05-06-2020 01:07:17.898 [main] INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.Oracle12cDialect
+05-06-2020 01:07:55.980 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+05-06-2020 01:07:55.992 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+05-06-2020 01:07:56.059 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+05-06-2020 01:07:57.023 [main] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6e364f1f, org.springframework.security.web.context.SecurityContextPersistenceFilter@386e9fd8, org.springframework.security.web.header.HeaderWriterFilter@6501b105, org.springframework.security.web.authentication.logout.LogoutFilter@405d8a80, com.bns.config.JwtRequestFilter@40712ee9, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@10745a02, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5611bba, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@429e7914, org.springframework.security.web.session.SessionManagementFilter@3d798e76, org.springframework.security.web.access.ExceptionTranslationFilter@175f859e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2c815fdc]
+05-06-2020 01:07:57.083 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping.initHandlerMethods - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+05-06-2020 01:07:57.345 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor.initialize - Initializing ExecutorService 'applicationTaskExecutor'
+05-06-2020 01:07:57.697 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper.start - Context refreshed
+05-06-2020 01:07:57.726 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper.start - Found 1 custom documentation plugin(s)
+05-06-2020 01:07:57.772 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner.scan - Scanning for api listing references
+05-06-2020 01:07:58.092 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8082 (http) with context path ''
+05-06-2020 01:07:58.097 [main] INFO  com.bns.SpringBootJwtApplication.logStarted - Started SpringBootJwtApplication in 44.569 seconds (JVM running for 45.7)
+05-06-2020 01:08:36.836 [http-nio-8082-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+05-06-2020 01:08:36.837 [http-nio-8082-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
+05-06-2020 01:08:36.849 [http-nio-8082-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 11 ms
+05-06-2020 01:08:36.873 [http-nio-8082-exec-1] WARN  com.bns.config.JwtRequestFilter.doFilterInternal - JWT Token does not begin with Bearer String
+05-06-2020 01:08:36.960 [http-nio-8082-exec-3] WARN  com.bns.config.JwtRequestFilter.doFilterInternal - JWT Token does not begin with Bearer String
+05-06-2020 01:08:36.965 [http-nio-8082-exec-4] WARN  com.bns.config.JwtRequestFilter.doFilterInternal - JWT Token does not begin with Bearer String
+05-06-2020 01:08:36.966 [http-nio-8082-exec-6] WARN  com.bns.config.JwtRequestFilter.doFilterInternal - JWT Token does not begin with Bearer String
+05-06-2020 01:08:36.970 [http-nio-8082-exec-2] WARN  com.bns.config.JwtRequestFilter.doFilterInternal - JWT Token does not begin with Bearer String
+05-06-2020 01:08:36.973 [http-nio-8082-exec-5] WARN  com.bns.config.JwtRequestFilter.doFilterInternal - JWT Token does not begin with Bearer String
+05-06-2020 01:08:37.706 [http-nio-8082-exec-7] WARN  com.bns.config.JwtRequestFilter.doFilterInternal - JWT Token does not begin with Bearer String
+05-06-2020 01:08:37.788 [http-nio-8082-exec-10] WARN  com.bns.config.JwtRequestFilter.doFilterInternal - JWT Token does not begin with Bearer String
+05-06-2020 01:08:37.899 [http-nio-8082-exec-9] WARN  com.bns.config.JwtRequestFilter.doFilterInternal - JWT Token does not begin with Bearer String
+05-06-2020 01:08:37.918 [http-nio-8082-exec-8] WARN  com.bns.config.JwtRequestFilter.doFilterInternal - JWT Token does not begin with Bearer String
+05-06-2020 01:08:38.041 [http-nio-8082-exec-1] WARN  com.bns.config.JwtRequestFilter.doFilterInternal - JWT Token does not begin with Bearer String
+05-06-2020 01:08:38.043 [http-nio-8082-exec-3] WARN  com.bns.config.JwtRequestFilter.doFilterInternal - JWT Token does not begin with Bearer String
+05-06-2020 01:08:38.066 [http-nio-8082-exec-5] WARN  com.bns.config.JwtRequestFilter.doFilterInternal - JWT Token does not begin with Bearer String
+05-06-2020 01:08:38.068 [http-nio-8082-exec-6] WARN  com.bns.config.JwtRequestFilter.doFilterInternal - JWT Token does not begin with Bearer String
+05-06-2020 01:08:38.144 [http-nio-8082-exec-4] WARN  com.bns.config.JwtRequestFilter.doFilterInternal - JWT Token does not begin with Bearer String
+05-06-2020 01:08:38.306 [http-nio-8082-exec-1] WARN  i.s.m.p.AbstractSerializableParameter.getExample - Illegal DefaultValue null for parameter type integer
+java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Long.parseLong(Unknown Source)
+	at java.lang.Long.valueOf(Unknown Source)
+	at io.swagger.models.parameters.AbstractSerializableParameter.getExample(AbstractSerializableParameter.java:412)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.fasterxml.jackson.databind.ser.BeanPropertyWriter.serializeAsField(BeanPropertyWriter.java:688)
+	at com.fasterxml.jackson.databind.ser.std.BeanSerializerBase.serializeFields(BeanSerializerBase.java:721)
+	at com.fasterxml.jackson.databind.ser.BeanSerializer.serialize(BeanSerializer.java:166)
+	at com.fasterxml.jackson.databind.ser.impl.IndexedListSerializer.serializeContents(IndexedListSerializer.java:119)
+	at com.fasterxml.jackson.databind.ser.impl.IndexedListSerializer.serialize(IndexedListSerializer.java:79)
+	at com.fasterxml.jackson.databind.ser.impl.IndexedListSerializer.serialize(IndexedListSerializer.java:18)
+	at com.fasterxml.jackson.databind.ser.BeanPropertyWriter.serializeAsField(BeanPropertyWriter.java:727)
+	at com.fasterxml.jackson.databind.ser.std.BeanSerializerBase.serializeFields(BeanSerializerBase.java:721)
+	at com.fasterxml.jackson.databind.ser.BeanSerializer.serialize(BeanSerializer.java:166)
+	at com.fasterxml.jackson.databind.ser.BeanPropertyWriter.serializeAsField(BeanPropertyWriter.java:727)
+	at com.fasterxml.jackson.databind.ser.std.BeanSerializerBase.serializeFields(BeanSerializerBase.java:721)
+	at com.fasterxml.jackson.databind.ser.BeanSerializer.serialize(BeanSerializer.java:166)
+	at com.fasterxml.jackson.databind.ser.std.MapSerializer.serializeFields(MapSerializer.java:722)
+	at com.fasterxml.jackson.databind.ser.std.MapSerializer.serialize(MapSerializer.java:643)
+	at com.fasterxml.jackson.databind.ser.std.MapSerializer.serialize(MapSerializer.java:33)
+	at com.fasterxml.jackson.databind.ser.BeanPropertyWriter.serializeAsField(BeanPropertyWriter.java:727)
+	at com.fasterxml.jackson.databind.ser.std.BeanSerializerBase.serializeFields(BeanSerializerBase.java:721)
+	at com.fasterxml.jackson.databind.ser.BeanSerializer.serialize(BeanSerializer.java:166)
+	at com.fasterxml.jackson.databind.ser.DefaultSerializerProvider._serialize(DefaultSerializerProvider.java:480)
+	at com.fasterxml.jackson.databind.ser.DefaultSerializerProvider.serializeValue(DefaultSerializerProvider.java:319)
+	at com.fasterxml.jackson.databind.ObjectMapper._configAndWriteValue(ObjectMapper.java:4094)
+	at com.fasterxml.jackson.databind.ObjectMapper.writeValueAsString(ObjectMapper.java:3404)
+	at springfox.documentation.spring.web.json.JsonSerializer.toJson(JsonSerializer.java:38)
+	at springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(Swagger2Controller.java:105)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:113)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:126)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:90)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:118)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:158)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at com.bns.config.JwtRequestFilter.doFilterInternal(JwtRequestFilter.java:71)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:92)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:77)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1579)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Unknown Source)
+05-06-2020 01:08:38.486 [http-nio-8082-exec-2] WARN  com.bns.config.JwtRequestFilter.doFilterInternal - JWT Token does not begin with Bearer String
+05-06-2020 01:08:38.487 [http-nio-8082-exec-7] WARN  com.bns.config.JwtRequestFilter.doFilterInternal - JWT Token does not begin with Bearer String
+05-06-2020 01:08:40.517 [http-nio-8082-exec-10] WARN  com.bns.config.JwtRequestFilter.doFilterInternal - JWT Token does not begin with Bearer String
+05-06-2020 01:08:40.746 [http-nio-8082-exec-9] WARN  com.bns.config.JwtRequestFilter.doFilterInternal - JWT Token does not begin with Bearer String
+05-06-2020 01:08:45.570 [http-nio-8082-exec-8] WARN  com.bns.config.JwtRequestFilter.doFilterInternal - JWT Token does not begin with Bearer String
+05-06-2020 01:08:45.577 [http-nio-8082-exec-8] INFO  c.bns.controller.EmployeeController.getAllEmployees - GET ALL EMPLOYEE
+05-06-2020 01:08:46.077 [http-nio-8082-exec-6] WARN  com.bns.config.JwtRequestFilter.doFilterInternal - JWT Token does not begin with Bearer String
+05-06-2020 01:08:47.113 [http-nio-8082-exec-5] WARN  com.bns.config.JwtRequestFilter.doFilterInternal - JWT Token does not begin with Bearer String
+05-06-2020 01:08:47.115 [http-nio-8082-exec-5] INFO  c.bns.controller.EmployeeController.getAllEmployees - GET ALL EMPLOYEE
+05-06-2020 01:21:12.169 [RMI TCP Connection(25)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin.shutdown - Application shutdown requested.
+05-06-2020 01:21:12.178 [RMI TCP Connection(25)-127.0.0.1] INFO  o.s.s.c.ThreadPoolTaskExecutor.shutdown - Shutting down ExecutorService 'applicationTaskExecutor'
+05-06-2020 01:21:12.182 [RMI TCP Connection(25)-127.0.0.1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+05-06-2020 01:21:12.187 [RMI TCP Connection(25)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+05-06-2020 01:21:12.214 [RMI TCP Connection(25)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
