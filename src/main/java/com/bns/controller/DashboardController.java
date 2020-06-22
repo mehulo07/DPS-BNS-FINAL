@@ -115,8 +115,8 @@ public class DashboardController {
 		return obj;
 	}
 	
-	@GetMapping(value = "/getProductCategoryDetails")
-	public JSONObject getStockCategoryI2D(
+	@GetMapping(value = "/getProductCategoryActionList")
+	public JSONObject getProductCategoryActionList(
 			@RequestParam String year,
 			@RequestParam String month,
 			@RequestParam String productCategoryId,
