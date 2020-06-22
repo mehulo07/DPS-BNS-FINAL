@@ -124,7 +124,7 @@ public class ProductInfoService {
 	public ResponseEntity<List<ProductInfo>> getProductListByCategoryID(String catId) {
 		List<ProductInfo> searchProdList = null;
 		try {
-			searchProdList = productInfoRepository.getProductListForDashboard(caId);
+			searchProdList = productInfoRepository.getProductListForDashboard(catId);
 			if(searchProdList != null)
 				return ResponseEntity.ok().body(searchProdList);
 			else

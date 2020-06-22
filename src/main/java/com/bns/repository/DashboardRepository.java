@@ -147,7 +147,7 @@ public List<ProductCategoryAction> getProductCategoryActionData(
 		) {
 	List<ProductCategoryAction> returnObj = null;
 	try {
-			returnObj =  jdbcTemplate.query(propSource.getProperty("getProductActionData"),
+			returnObj =  jdbcTemplate.query(propSource.getProperty("getProductActionData1a"),
 					new Object[] { year , month,productCategoryId,stockCategoryId,catalogNo},
 					new ProductCategoryActionMapper());
 					
