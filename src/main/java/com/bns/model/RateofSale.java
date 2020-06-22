@@ -54,7 +54,11 @@ public class RateofSale implements Serializable {
 	private String currentMonthCountry;
 		
 	private String currentMonthSupplierName;
+	
+	private String prevMonthPurchasedPrice;
 		
+	
+
 	private String prevMonthSupplierName;
 		
 	private String prevMonthCountry;
@@ -96,6 +100,14 @@ public class RateofSale implements Serializable {
 	public RateofSale() {
 		}
 
+	public String getPrevMonthPurchasedPrice() {
+		return prevMonthPurchasedPrice;
+	}
+
+	public void setPrevMonthPurchasedPrice(String prevMonthPurchasedPrice) {
+		this.prevMonthPurchasedPrice = prevMonthPurchasedPrice;
+	}
+	
 	public String getRateOfProductSaleId() {
 			return rateOfProductSaleId;
 		}

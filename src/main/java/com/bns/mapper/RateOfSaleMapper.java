@@ -32,6 +32,7 @@ public class RateOfSaleMapper implements RowMapper<RateofSale> {
 		rateofSale.setCurrentMonthPurchasedPrice(rs.getString("CURRENT_MONTH_PURCHASED_PRICE") == null ? "" : rs.getString("CURRENT_MONTH_PURCHASED_PRICE"));
 		rateofSale.setCurrentMonthSupplierName(rs.getString("CURRENT_MONTH_SUPPLIER_NAME") == null ? "" : rs.getString("CURRENT_MONTH_SUPPLIER_NAME"));
 		rateofSale.setCurrentMonthCountry(rs.getString("CURRENT_MONTH_COUNTRY") == null ? "" : rs.getString("CURRENT_MONTH_COUNTRY"));
+		rateofSale.setPrevMonthPurchasedPrice(rs.getString("PREV_MONTH_PURCHASED_PRICE") == null ? "" : rs.getString("PREV_MONTH_PURCHASED_PRICE"));
 		rateofSale.setPrevMonthSupplierName(rs.getString("PREV_MONTH_SUPPLIER_NAME") == null ? "" : rs.getString("PREV_MONTH_SUPPLIER_NAME"));
 		rateofSale.setPrevMonthCountry(rs.getString("PREV_MONTH_COUNTRY") == null ? "" : rs.getString("PREV_MONTH_COUNTRY"));
 		rateofSale.setUnitSoldPerDay(rs.getString("UNITS_SOLD_PER_DAY") == null ? "" : rs.getString("UNITS_SOLD_PER_DAY"));
