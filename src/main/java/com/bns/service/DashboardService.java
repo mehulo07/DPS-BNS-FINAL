@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.bns.dto.DashboardClientRequest;
 import com.bns.dto.StockCalculationRequest;
@@ -49,4 +50,20 @@ public class DashboardService {
 	public boolean getEditBNLeadTime(String id, String leadTime) {
 		return dashboardRepository.getEditBNLeadTime(id, leadTime);
 	}
+	
+	public Long getStockIDByCatalogNo(String catalogNo) {
+		return dashboardRepository.getStockIDByCatalogNo(catalogNo);
+	}
+	
+	public List<ProductCategoryAction> getProductCategoryActionData(String year,
+			 String month,
+			 String productCategoryId,
+			 String stockCategoryId,
+			 String catalogNo){
+		List<ProductCategoryAction> pList = null;
+		pList = dashboardRepository.getProductCategoryActionData(year, month , productCategoryId,stockCategoryId,catalogNo ); 
+		return pList;
+	}
+	
+	
 }

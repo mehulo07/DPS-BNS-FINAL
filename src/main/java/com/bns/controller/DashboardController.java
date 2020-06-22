@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,7 +16,9 @@ import org.springframework.web.bind.annotation.RestController;
 import com.bns.dto.DashboardClientRequest;
 import com.bns.dto.StockCalculationRequest;
 import com.bns.model.ProductCategoryAction;
+import com.bns.model.ProductInfo;
 import com.bns.service.DashboardService;
+import com.bns.service.ProductInfoService;
 
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
@@ -27,6 +30,9 @@ public class DashboardController {
 	
 	@Autowired
 	private DashboardService dashboardService;
+	
+	@Autowired
+	private ProductInfoService productInfoService;
 	
 	@PostMapping("/stockData")
 	public JSONObject getStockDataYearWise(@RequestBody DashboardClientRequest dashboardClientRequest) {
@@ -92,5 +98,37 @@ public class DashboardController {
 			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Exception while update lead time.");
 		}
 	}
+	
+	@GetMapping("/searchProduct")
+	public ResponseEntity<List<ProductInfo>> getProductList(@RequestParam String categoryId) {
+		
+		return productInfoService.getProductListByCategoryID(categoryId);
+		
+	}
+	
+	@GetMapping(value = "/getStockCategoryID")
+	public JSONObject getStockCategoryID(@RequestParam String catalogNo) {
+		JSONObject obj = new JSONObject();
+		Long stockCategoryId = dashboardService.getStockIDByCatalogNo(catalogNo);
+		obj.put("stockCategoryId",stockCategoryId);
+		obj.put("catalogNo",catalogNo);
+		return obj;
+	}
+	
+	@GetMapping(value = "/getProductCategoryDetails")
+	public JSONObject getStockCategoryI2D(
+			@RequestParam String year,
+			@RequestParam String month,
+			@RequestParam String productCategoryId,
+			@RequestParam String stockCategoryId,
+			@RequestParam String catalogNo
+			) {
+		JSONObject obj = new JSONObject();
+		obj.put("rows",dashboardService.getProductCategoryActionData(year,month,productCategoryId,
+				stockCategoryId,catalogNo));
+		return obj;
+	}
+	
+	
 	
 }

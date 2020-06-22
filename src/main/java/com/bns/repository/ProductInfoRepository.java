@@ -39,11 +39,32 @@ public class ProductInfoRepository {
 	public String getProductNameByCatalogNo(Object catalogNo, Object contract) {
 		String productDesc = null;
 		try {
-			productDesc = jdbcTemplate.queryForObject(propSource.getProperty("getProductName"), new Object[] { (String) contract , (String) catalogNo},  new StringDataMapper());
+			productDesc = jdbcTemplate.queryForObject(propSource.getProperty("getProductName"),
+					new Object[] { (String) contract , (String) catalogNo},  new StringDataMapper());
 		}catch(Exception e) {
 			System.out.println("Exception while get product data"+e);
 		}
 			
 		return productDesc;
 	}
+	
+	public List<ProductInfo> getProductListForDashboard(String catId) throws Exception {
+		List<ProductInfo> retrunObj = null;
+		try {
+			 if(catId=="" || catId==null)
+				retrunObj = jdbcTemplate.query(propSource.getProperty("getProductListForDashBoard"),
+						new ProductInfoMapper());
+			 else
+				 retrunObj = jdbcTemplate.query(propSource.getProperty("getProductListForDashBoardByCategoryID"),
+						 new Object[] { (String) catId }, new ProductInfoMapper());
+			
+		}catch(Exception e) {
+			System.out.println("matching product not found :"+e);
+		}
+		
+		return retrunObj;	
+	}
+	
+	
+	
 }

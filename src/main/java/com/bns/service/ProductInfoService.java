@@ -120,4 +120,19 @@ public class ProductInfoService {
 		} finally {}
 		return jarr;
 	}
+	
+	public ResponseEntity<List<ProductInfo>> getProductListByCategoryID(String catId) {
+		List<ProductInfo> searchProdList = null;
+		try {
+			searchProdList = productInfoRepository.getProductListForDashboard(caId);
+			if(searchProdList != null)
+				return ResponseEntity.ok().body(searchProdList);
+			else
+				return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(null);
+		}catch(Exception e) {
+			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(null);
+		}
+	}
+	
+	
 }

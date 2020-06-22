@@ -16,6 +16,7 @@ import com.bns.dto.DashboardClientRequest;
 import com.bns.dto.StockCalculationRequest;
 import com.bns.mapper.DashboardCalculationMapper;
 import com.bns.mapper.ProductCategoryActionMapper;
+import com.bns.mapper.UserInfoMapper;
 import com.bns.model.ProductCategoryAction;
 
 import net.sf.json.JSONArray;
@@ -121,4 +122,49 @@ public class DashboardRepository {
 		
 		return namejdbcTemplate.update(query,paramMap) > 0;
 	}
+	
+	public Long getStockIDByCatalogNo(String productCatalogNo) {
+		String query = propSource.getProperty("getStockIDByCatalogNo") ;
+		return jdbcTemplate.queryForObject(query, new Object[] { productCatalogNo}, Long.class);
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+public List<ProductCategoryAction> getProductCategoryActionData(
+		String year,
+		 String month,
+		 String productCategoryId,
+		 String stockCategoryId,
+		 String catalogNo
+		) {
+	List<ProductCategoryAction> returnObj = null;
+	try {
+			returnObj =  jdbcTemplate.query(propSource.getProperty("getProductActionData"),
+					new Object[] { year , month,productCategoryId,stockCategoryId,catalogNo},
+					new ProductCategoryActionMapper());
+					
+					
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		
+		return returnObj;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }
