@@ -33,14 +33,19 @@ public class RateOfSaleRepository {
 	@Autowired
 	private Environment propSource;
 
-	public List<RateofSale> getAllRateOfSaleByCategoryID(String productCategoryId,String startIndex,String endIndex) {
-		return jdbcTemplate.query(propSource.getProperty("getAllRateOfSaleByCategoryID"), 
+	public List<RateofSale> getAllRateOfSaleByCategoryIDWithPagination(String productCategoryId,String startIndex,String endIndex) {
+		return jdbcTemplate.query(propSource.getProperty("getAllRateOfSaleByCategoryIDWithPagination"), 
 				new Object[] {productCategoryId,startIndex,endIndex},new RateOfSaleMapper());
 		}
 	
 	public List<RateofSale> getAllRateOfSaleByCategoryIDAndProductName(String categoryId,String productName) {
 		return jdbcTemplate.query(propSource.getProperty("getAllRateOfSaleByCategoryIDAndProductName"), new Object[] {categoryId,productName},new RateOfSaleMapper());
 	}
+	
+	public List<RateofSale> getAllRateOfSaleByCategoryID(String productCategoryId) {
+		return jdbcTemplate.query(propSource.getProperty("getAllRateOfSaleByCategoryID"), 
+				new Object[] {productCategoryId},new RateOfSaleMapper());
+		}
 	
 	
 

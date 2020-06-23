@@ -46,13 +46,13 @@ public class RateOfSaleController {
 	@ApiModelProperty(value = "Get All Rate of Sale  ", notes = "Retrive all  data for rate of sell screen")
 	public List<RateofSale> getAllRateOfSaleRecord(@PathVariable(value = "categoryId") String categoryId,
 			
-			@PathVariable(value = "startIndex") String startIndex
+			@PathVariable(value = "startIndex") String startIndex,
 			
 			
 			@PathVariable(value = "endIndex") String endIndex
 			
 			) {
-		return rateOfSaleService.getRateOfSaleListByCategoryID(categoryId);
+		return rateOfSaleService.getRateOfSaleListByCategoryIDWithPagination(categoryId, startIndex, endIndex);
 	}
 
 	@GetMapping("/search/{categoryId}/{productName}")
@@ -64,7 +64,7 @@ public class RateOfSaleController {
 
 		
 
-	@GetMapping(value = "/download/")
+	@GetMapping(value = "/download/report.xlsx")
 	@ApiModelProperty(value = "Get All Record Excel ", notes = "Get Excel File")
 	public ResponseEntity<InputStreamResource>  getAllRateOfSaleSearchedRecordExcel(
 			@RequestParam("categoryId") String categoryId,
@@ -84,14 +84,12 @@ public class RateOfSaleController {
 			ByteArrayInputStream in = rateOfSaleService.customersToExcel(rateofSaleList,columns);
 			// return IOUtils.toByteArray(in);
 			HttpHeaders headers = new org.springframework.http.HttpHeaders();
-			headers.add("Content-Disposition", "attachment; filename=report.xlsx");
+	        headers.add("Content-Disposition", "attachment; filename=report.xlsx");
 			DateFormat dform =  new SimpleDateFormat("dd/MM/yy"); 
 			Date obj = new Date();
 			String FILE_NAME ="Report-"+dform.format(obj);
-			  Workbook workbook = new XSSFWorkbook(); 
-			//  return rateOfSaleService.getRateOfSaleListByCategoryIDAndPruductName(categoryId,productName);
-			 
-			  return ResponseEntity.ok().headers(headers).body(new InputStreamResource(in));
+			Workbook workbook = new XSSFWorkbook(); 
+			return ResponseEntity.ok().headers(headers).body(new InputStreamResource(in));
 		}
 		return null;
 		

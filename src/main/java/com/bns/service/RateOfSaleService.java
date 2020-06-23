@@ -32,9 +32,14 @@ public class RateOfSaleService {
 	@Autowired
 	private RateOfSaleRepository rateOfSaleRepository;
 	
-	public List<RateofSale> getRateOfSaleListByCategoryID(String categoryId,String startIndex, String endIndex) {
+	public List<RateofSale> getRateOfSaleListByCategoryIDWithPagination(String categoryId,String startIndex, String endIndex) {
 		
-		 return rateOfSaleRepository.getAllRateOfSaleByCategoryID(categoryId,startIndex,endIndex);
+		 return rateOfSaleRepository.getAllRateOfSaleByCategoryIDWithPagination(categoryId,startIndex,endIndex);
+	 }
+	
+	public List<RateofSale> getRateOfSaleListByCategoryID(String categoryId) {
+		
+		 return rateOfSaleRepository.getAllRateOfSaleByCategoryID(categoryId);
 	 }
 	
 	
