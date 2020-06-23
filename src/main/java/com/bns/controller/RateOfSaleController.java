@@ -44,7 +44,14 @@ public class RateOfSaleController {
 
 	@GetMapping("/{categoryId}/{startIndex}/{endIndex}")
 	@ApiModelProperty(value = "Get All Rate of Sale  ", notes = "Retrive all  data for rate of sell screen")
-	public List<RateofSale> getAllRateOfSaleRecord(@PathVariable(value = "categoryId") String categoryId) {
+	public List<RateofSale> getAllRateOfSaleRecord(@PathVariable(value = "categoryId") String categoryId,
+			
+			@PathVariable(value = "startIndex") String startIndex
+			
+			
+			@PathVariable(value = "endIndex") String endIndex
+			
+			) {
 		return rateOfSaleService.getRateOfSaleListByCategoryID(categoryId);
 	}
 

@@ -37,20 +37,6 @@ public class RateOfSaleService {
 		 return rateOfSaleRepository.getAllRateOfSaleByCategoryID(categoryId,startIndex,endIndex);
 	 }
 	
-	public List<RateofSale> getRateOfSaleListByCategoryID(RateOfSaleRequest rateOfSaleRequest) {
-		List<RateofSale> pList = null;
-		
-			int currentPage = rateOfSaleRequest.getCurrentPage();
-			int recordSize = rateOfSaleRequest.getRowSize();
-			int startIndex = currentPage * recordSize + 1;
-			int endIndex = startIndex + recordSize - 1;
-
-			pList = rateOfSaleRepository.getAllRateOfSaleByCategoryID(startIndex, endIndex , rateOfSaleRequest ); 
-		
-		return pList;
-	}
-	
-	
 	
 	public List<RateofSale> getRateOfSaleListByCategoryIDAndProductName(String categoryId,String productName) {
 		

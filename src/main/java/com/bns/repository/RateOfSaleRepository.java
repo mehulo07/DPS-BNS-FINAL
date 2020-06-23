@@ -42,29 +42,6 @@ public class RateOfSaleRepository {
 		return jdbcTemplate.query(propSource.getProperty("getAllRateOfSaleByCategoryIDAndProductName"), new Object[] {categoryId,productName},new RateOfSaleMapper());
 	}
 	
-	public List<RateofSale> getAllRateOfSaleByCategoryIDwithPagination(int startIndex,int endIndex, 
-			RateOfSaleRequest rateOfsaleRequest) {
-		
-		List<ProductCategoryAction> returnObj = null;
-		String query  =  propSource.getProperty("getAllRateOfSaleByCategoryID") ;
-		Map<String, Object> paramMap = new HashMap<String, Object>();
-		paramMap.put("startIndex", startIndex);
-		paramMap.put("endIndex", endIndex);
-		paramMap.put("productCategoryId",rateOfsaleRequest.get());
-		
-		paramMap.put("categoryId",productCategoryId);
-			query = query.replace("CATALOG_NO = :categoryId");
-		}
-		
-		RowMapper<ProductCategoryAction> rowMapper = new ProductCategoryActionMapper();
-		try {
-			returnObj = namejdbcTemplate.query(query, paramMap, rowMapper);
-		}catch(Exception e) {
-			e.printStackTrace();
-		}
-		
-		return returnObj;
-	}
 	
 
 }
