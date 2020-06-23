@@ -42,7 +42,7 @@ public class RateOfSaleController {
 	@Autowired
 	private RateOfSaleService rateOfSaleService;
 
-	@GetMapping("/{categoryId}")
+	@GetMapping("/{categoryId}/{startIndex}/{endIndex}")
 	@ApiModelProperty(value = "Get All Rate of Sale  ", notes = "Retrive all  data for rate of sell screen")
 	public List<RateofSale> getAllRateOfSaleRecord(@PathVariable(value = "categoryId") String categoryId) {
 		return rateOfSaleService.getRateOfSaleListByCategoryID(categoryId);

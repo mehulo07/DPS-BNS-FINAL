@@ -5,6 +5,10 @@ import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.util.CellRangeAddress;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import com.bns.dto.RateOfSaleRequest;
+import com.bns.dto.StockCalculationRequest;
+import com.bns.model.ProductCategoryAction;
 import com.bns.model.RateofSale;
 import com.bns.repository.RateOfSaleRepository;
 import java.io.ByteArrayInputStream;
@@ -28,10 +32,25 @@ public class RateOfSaleService {
 	@Autowired
 	private RateOfSaleRepository rateOfSaleRepository;
 	
-	public List<RateofSale> getRateOfSaleListByCategoryID(String categoryId) {
+	public List<RateofSale> getRateOfSaleListByCategoryID(String categoryId,String startIndex, String endIndex) {
 		
-		 return rateOfSaleRepository.getAllRateOfSaleByCategoryID(categoryId);
+		 return rateOfSaleRepository.getAllRateOfSaleByCategoryID(categoryId,startIndex,endIndex);
 	 }
+	
+	public List<RateofSale> getRateOfSaleListByCategoryID(RateOfSaleRequest rateOfSaleRequest) {
+		List<RateofSale> pList = null;
+		
+			int currentPage = rateOfSaleRequest.getCurrentPage();
+			int recordSize = rateOfSaleRequest.getRowSize();
+			int startIndex = currentPage * recordSize + 1;
+			int endIndex = startIndex + recordSize - 1;
+
+			pList = rateOfSaleRepository.getAllRateOfSaleByCategoryID(startIndex, endIndex , rateOfSaleRequest ); 
+		
+		return pList;
+	}
+	
+	
 	
 	public List<RateofSale> getRateOfSaleListByCategoryIDAndProductName(String categoryId,String productName) {
 		
